@@ -19,3 +19,5 @@ const {
 } = require('./handlers/screams');
 const {
     signup,
+    login,
+    uploadImage,
