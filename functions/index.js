@@ -13,3 +13,5 @@ const {
     postOneScream,
     getScream,
     commentOnScream,
+    likeScream,
+    unlikeScream,
