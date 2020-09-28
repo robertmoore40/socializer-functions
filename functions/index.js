@@ -17,3 +17,5 @@ const {
     unlikeScream,
     deleteScream
 } = require('./handlers/screams');
+const {
+    signup,
