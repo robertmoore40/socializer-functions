@@ -26,3 +26,6 @@ const {
     getUserDetails,
     markNotificationsRead
 } = require('./handlers/users');
+
+app.get('/screams', getAllScreams);
+app.post('/scream', FBAuth, postOneScream);
