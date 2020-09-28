@@ -25,3 +25,4 @@ const {
     getAuthenticatedUser,
     getUserDetails,
     markNotificationsRead
+} = require('./handlers/users');
