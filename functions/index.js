@@ -11,3 +11,5 @@ const { db } = require('./util/admin');
 const {
     getAllScreams,
     postOneScream,
+    getScream,
+    commentOnScream,
