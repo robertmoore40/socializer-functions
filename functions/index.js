@@ -21,3 +21,5 @@ const {
     signup,
     login,
     uploadImage,
+    addUserDetails,
+    getAuthenticatedUser,
