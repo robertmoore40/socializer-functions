@@ -23,3 +23,5 @@ const {
     uploadImage,
     addUserDetails,
     getAuthenticatedUser,
+    getUserDetails,
+    markNotificationsRead
