@@ -15,3 +15,5 @@ const {
     commentOnScream,
     likeScream,
     unlikeScream,
+    deleteScream
+} = require('./handlers/screams');
