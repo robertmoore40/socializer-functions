@@ -39,3 +39,4 @@ app.post('/signup', signup);
 app.post('/login', login);
 app.post('/user/image', FBAuth, uploadImage);
 app.post('/user', FBAuth, addUserDetails);
+app.get('/user', FBAuth, getAuthenticatedUser);
