@@ -36,3 +36,4 @@ app.get('/scream/:screamId/unlike', FBAuth, unlikeScream);
 app.post('/scream/:screamId/comment', FBAuth, commentOnScream);
 
 app.post('/signup', signup);
+app.post('/login', login);
