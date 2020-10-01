@@ -37,3 +37,4 @@ app.post('/scream/:screamId/comment', FBAuth, commentOnScream);
 
 app.post('/signup', signup);
 app.post('/login', login);
+app.post('/user/image', FBAuth, uploadImage);
