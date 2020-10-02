@@ -61,3 +61,6 @@ exports.createNotificationOnLike = functions
                 createdAt: new Date().toISOString(),
                 recipient: doc.data().userHandle,
                 sender: snapshot.data().userHandle,
+                type: 'like',
+                read: false,
+                screamId: doc.id
