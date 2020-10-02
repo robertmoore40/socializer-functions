@@ -49,3 +49,6 @@ exports.createNotificationOnLike = functions
 .region('europe-west1')
 .firestore.document('likes/{id}')
 .onCreate((snapshot) => {
+    return db
+    .doc(`/screams/${snapshot.data().screamId}`)
+    .get()
