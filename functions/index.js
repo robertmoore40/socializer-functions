@@ -64,3 +64,8 @@ exports.createNotificationOnLike = functions
                 type: 'like',
                 read: false,
                 screamId: doc.id
+            });
+        }
+      })
+      .catch((err) => console.error(err));
+  });
