@@ -55,3 +55,5 @@ exports.createNotificationOnLike = functions
     .then((doc) => {
         if (
           doc.exists &&
+          doc.data().userHandle !== snapshot.data().userHandle
+          ) {
