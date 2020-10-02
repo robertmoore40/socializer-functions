@@ -46,3 +46,6 @@ app.post('/notifications', FBAuth, markNotificationsRead);
 exports.api = functions.region('europe-west1').https.onRequest(app);
 
 exports.createNotificationOnLike = functions
+.region('europe-west1')
+.firestore.document('likes/{id}')
+.onCreate((snapshot) => {
