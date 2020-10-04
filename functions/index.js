@@ -89,3 +89,6 @@ exports.createNotificationOnLike = functions
         return db
         .doc(`/screams/${snapshot.data().screamId}`)
         .get()
+        .then((doc) => {
+            if (
+              doc.exists &&
