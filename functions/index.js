@@ -77,3 +77,7 @@ exports.createNotificationOnLike = functions
     return db
     .doc(`/notifications/${snapshot.id}`)
     .delete()
+    .catch((err) => {
+        console.error(err);
+        return;
+      });
