@@ -102,3 +102,6 @@ exports.createNotificationOnLike = functions
                     read: false,
                     screamId: doc.id
                   });
+                }
+            })
+            .catch((err) => {
