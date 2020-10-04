@@ -96,3 +96,5 @@ exports.createNotificationOnLike = functions
               ) {
                 return db.doc(`/notifications/${snapshot.id}`).set({
                     createdAt: new Date().toISOString(),
+                    recipient: doc.data().userHandle,
+                    sender: snapshot.data().userHandle,
