@@ -94,3 +94,5 @@ exports.createNotificationOnLike = functions
               doc.exists &&
               doc.data().userHandle !== snapshot.data().userHandle
               ) {
+                return db.doc(`/notifications/${snapshot.id}`).set({
+                    createdAt: new Date().toISOString(),
