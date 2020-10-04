@@ -105,3 +105,7 @@ exports.createNotificationOnLike = functions
                 }
             })
             .catch((err) => {
+                console.error(err);
+        return;
+      });
+  });
