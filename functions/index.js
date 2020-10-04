@@ -81,3 +81,6 @@ exports.createNotificationOnLike = functions
         console.error(err);
         return;
       });
+    });
+    exports.createNotificationOnComment = functions
+      .region('europe-west1')
