@@ -74,3 +74,6 @@ exports.createNotificationOnLike = functions
   .region('europe-west1')
   .firestore.document('likes/{id}')
   .onDelete((snapshot) => {
+    return db
+    .doc(`/notifications/${snapshot.id}`)
+    .delete()
