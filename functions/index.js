@@ -109,3 +109,7 @@ exports.createNotificationOnComment = functions
         return;
       });
   });
+
+
+  
+exports.onUserImageChange = functions
