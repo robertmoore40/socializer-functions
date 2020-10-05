@@ -118,3 +118,7 @@ exports.onUserImageChange = functions
   .onUpdate((change) => {
     console.log(change.before.data());
     console.log(change.after.data());
+    if (change.before.data().imageUrl !== change.after.data().imageUrl) {
+      console.log('image has changed');
+      const batch = db.batch();
+      return db
