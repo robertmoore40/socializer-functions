@@ -144,3 +144,5 @@ exports.createNotificationOnComment = functions
     return db
     .collection('comments')
     .where('screamId', '==', screamId)
+    .get()
+    .then((data) => {
