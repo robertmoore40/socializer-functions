@@ -131,3 +131,6 @@ exports.createNotificationOnComment = functions
           batch.update(scream, { userImage: change.after.data().imageUrl });
         });
         return batch.commit();
+      });
+    } else return true;
+  });
