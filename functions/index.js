@@ -154,3 +154,9 @@ exports.createNotificationOnComment = functions
       .where('screamId', '==', screamId)
       .get();
   })
+
+  .then((data) => {
+    data.forEach((doc) => {
+      batch.delete(db.doc(`/likes/${doc.id}`));
+    });
+    return db
