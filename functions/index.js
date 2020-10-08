@@ -122,3 +122,5 @@ exports.createNotificationOnComment = functions
       console.log('image has changed');
       const batch = db.batch();
       return db
+      .collection('screams')
+      .where('userHandle', '==', change.before.data().handle)
