@@ -142,3 +142,5 @@ exports.createNotificationOnComment = functions
     const screamId = context.params.screamId;
     const batch = db.batch();
     return db
+    .collection('comments')
+    .where('screamId', '==', screamId)
