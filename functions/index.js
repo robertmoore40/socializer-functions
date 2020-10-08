@@ -140,3 +140,5 @@ exports.createNotificationOnComment = functions
   .firestore.document('/screams/{screamId}')
   .onDelete((snapshot, context) => {
     const screamId = context.params.screamId;
+    const batch = db.batch();
+    return db
