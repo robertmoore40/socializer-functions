@@ -112,8 +112,8 @@ exports.createNotificationOnComment = functions
 
 
   
-exports.onUserImageChange = functions
-.region('europe-west1')
+  exports.onUserImageChange = functions
+  .region('europe-west1')
   .firestore.document('/users/{userId}')
   .onUpdate((change) => {
     console.log(change.before.data());
