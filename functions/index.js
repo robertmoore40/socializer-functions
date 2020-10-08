@@ -168,3 +168,7 @@ exports.createNotificationOnComment = functions
   data.forEach((doc) => {
     batch.delete(db.doc(`/notifications/${doc.id}`));
   });
+  return batch.commit();
+})
+.catch((err) => console.error(err));
+});
