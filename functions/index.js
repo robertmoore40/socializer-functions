@@ -150,3 +150,7 @@ exports.createNotificationOnComment = functions
         batch.delete(db.doc(`/comments/${doc.id}`));
       });
       return db
+      .collection('likes')
+      .where('screamId', '==', screamId)
+      .get();
+  })
