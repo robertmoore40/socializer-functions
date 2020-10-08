@@ -134,3 +134,5 @@ exports.createNotificationOnComment = functions
       });
     } else return true;
   });
+
+  exports.onScreamDelete = functions
