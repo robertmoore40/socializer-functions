@@ -126,3 +126,6 @@ exports.createNotificationOnComment = functions
       .where('userHandle', '==', change.before.data().handle)
       .get()
       .then((data) => {
+        data.forEach((doc) => {
+          const scream = db.doc(`/screams/${doc.id}`);
+          batch.update(scream, { userImage: change.after.data().imageUrl });
