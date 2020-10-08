@@ -124,3 +124,5 @@ exports.createNotificationOnComment = functions
       return db
       .collection('screams')
       .where('userHandle', '==', change.before.data().handle)
+      .get()
+      .then((data) => {
