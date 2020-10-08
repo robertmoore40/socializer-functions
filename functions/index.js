@@ -138,3 +138,5 @@ exports.createNotificationOnComment = functions
   exports.onScreamDelete = functions
   .region('europe-west1')
   .firestore.document('/screams/{screamId}')
+  .onDelete((snapshot, context) => {
+    const screamId = context.params.screamId;
