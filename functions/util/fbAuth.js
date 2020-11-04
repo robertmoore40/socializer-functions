@@ -27,3 +27,9 @@ module.exports = (req, res, next) => {
     req.user.imageUrl = data.docs[0].data().imageUrl;
     return next();
   })
+
+  .catch((err) => {
+    console.error('Error while verifying token ', err);
+    return res.status(403).json(err);
+  });
+};
